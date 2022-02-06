@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/electronic-gradebook-react/static/css/main.6ff686c4.css",
+    "main.js": "/electronic-gradebook-react/static/js/main.94076045.js",
+    "index.html": "/electronic-gradebook-react/index.html",
+    "main.6ff686c4.css.map": "/electronic-gradebook-react/static/css/main.6ff686c4.css.map",
+    "main.94076045.js.map": "/electronic-gradebook-react/static/js/main.94076045.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6ff686c4.css",
+    "static/js/main.94076045.js"
+  ]
+}
