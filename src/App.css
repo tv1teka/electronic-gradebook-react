@@ -1,0 +1,79 @@
+.App {
+  text-align: center;
+}
+th {
+  background-color: #b1acf3;
+}
+.policies__table-body {
+  border-collapse: collapse;
+  margin: 0px auto;
+  border: 1px solid black;
+}
+.policies__table-cell {
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  padding: 10px;
+  width: 130px;
+  height: 30px;
+}
+
+input {
+  margin-bottom: 18px;
+  margin-left: 8px;
+}
+
+/* form {
+  position: fixed;
+  width: 450px;
+  height: 215px;
+  border: 1px solid black;
+  box-shadow: 0px 9px 14px rgba(0, 0, 0, 0.03);
+  border-radius: 15px;
+  background-color: #fff;
+} */
+
+form {
+  position: relative;
+  width: 450px;
+  /* height: 215px; */
+  border: 1px solid black;
+  box-shadow: 0px 9px 14px rgb(0 0 0 / 3%);
+  border-radius: 15px;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.button {
+  border: none;
+  padding: 18px 24px;
+  width: 201px;
+  height: 62px;
+  background: #7671dd;
+  box-shadow: 0px 27px 46px rgba(118, 113, 221, 0.12),
+    0px 8.13971px 13.8677px rgba(118, 113, 221, 0.0781907),
+    0px 3.38082px 5.75991px rgba(118, 113, 221, 0.06),
+    0px 1.22278px 2.08325px rgba(118, 113, 221, 0.0418093);
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 26px;
+  color: #ffffff;
+}
+
+.btn {
+  border: none;
+  background: #7671dd;
+  color: #ffffff;
+  border-radius: 3px;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 413px;
+  top: 12px;
+  margin-bottom: 15px;
+}
+.active {
+  background-color: #7671dd;
+  color: #fff;
+}
