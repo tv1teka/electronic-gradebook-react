@@ -5,42 +5,15 @@ import { observer } from "mobx-react"
 const Table = observer (()=> {
   
     const [popup, setPopup] = React.useState(false);
+    const [activeItem, setActiveItem] = React.useState({})
+    const [coordinates, setCoordinates]= React.useState(0)
 
-    const [activeItem, setActiveItem] = React.useState(null)
-    const [activeDate, setActiveDate] = React.useState(null)
-
-    const [left, setLeft]= React.useState(0)
-    const [top, setTop]= React.useState(0)
-
-    // React.useEffect(()=>{
-    //     if(popup) {
-    //         let el = document.querySelector('form');
-    //         el.style.left = `${left + 180}px`
-    //         el.style.top = `${top}px`
-    //     }
-
-    // })
-
-    // const changePosition = () => {
-
-    //     if(popup) {
-    //         let el = document.querySelector('form');
-    //         el.style.left = `${left + 180}px`
-    //         el.style.top = `${top}px`
-    //     }
-     
-    // }
 
     const openPopup = (event, index, date) => {
         let c = event.target.getBoundingClientRect()
-        setLeft(c.left)
-        setTop(c.top)
-
+        setCoordinates({left: c.left, top: c.top})
+        setActiveItem({studentId: index, date: date})
         setPopup(true)
-
-        setActiveItem(index)
-        setActiveDate(date)
-        // changePosition()
     }
 
     const change = (event) => {
@@ -51,8 +24,7 @@ const Table = observer (()=> {
 
     const closePopup = () => {
         setPopup(false)
-        setActiveItem(null)
-        setActiveDate(null)
+        setActiveItem({})
     }
 
   return (
@@ -72,7 +44,7 @@ const Table = observer (()=> {
                  
                     <td className="policies__table-cell">{item.FIO}</td>
                     {item.Data.map((i) => 
-                        <td className={activeItem === item.id && activeDate === i.date 
+                        <td className={activeItem.studentId === item.id && activeItem.date === i.date 
                             ? 'policies__table-cell active':'policies__table-cell'} 
                             key={i.date} 
                             onClick={(event)=> {openPopup(event, item.id, i.date);Store.setDay(i, item.FIO)}}>{i.grade}</td>
@@ -82,23 +54,24 @@ const Table = observer (()=> {
             </tbody>
         </table>
         {popup && 
-            <form id="form" onSubmit={(event)=>change(event)}>
+            <form id="form" style={{left: coordinates.left+180, top: coordinates.top}} 
+                  onSubmit={(event)=>change(event)}>
                 <a className="btn" onClick={()=>closePopup()}>X</a>
-              <h4>ФИО - {Store.day.FIO}</h4>
-              <h4>Дата - {Store.day.date}</h4>
-              <label>
-              Оценка:
-              <input id="gradeInput" type="number" required
-                     min={2} max={5}
-                     value={Store.day.grade}
-                     onChange={(event)=>Store.setDate(event.target.value)}/>
-              </label><br/>
-              <label>
-              Не присутствовал:
-              <input id="gradeInput" type="checkbox"
-                     onChange={(event)=>Store.setDate(event.target.value)}/>
-              </label><br/>
-              <input type="submit" className='button' value="Изменить оценку" />
+                <h4>ФИО - {Store.day.FIO}</h4>
+                <h4>Дата - {Store.day.date}</h4>
+                <label>
+                Оценка:
+                <input id="gradeInput" type="number" required
+                       min={2} max={5}
+                       value={Store.day.grade}
+                       onChange={(event)=>Store.setDate(event.target.value)}/>
+                </label><br/>
+                <label>
+                Не присутствовал:
+                <input id="gradeInput" type="checkbox"
+                       onChange={(event)=>Store.setDate(event.target.value)}/>
+                </label><br/>
+                <input type="submit" className='button' value="Изменить оценку" />
             </form>
           }
 
