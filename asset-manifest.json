@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/electronic-gradebook-react/static/css/main.2356843d.css",
-    "main.js": "/electronic-gradebook-react/static/js/main.deba30e7.js",
+    "main.css": "/electronic-gradebook-react/static/css/main.4da771ee.css",
+    "main.js": "/electronic-gradebook-react/static/js/main.1bbf3372.js",
     "index.html": "/electronic-gradebook-react/index.html",
-    "main.2356843d.css.map": "/electronic-gradebook-react/static/css/main.2356843d.css.map",
-    "main.deba30e7.js.map": "/electronic-gradebook-react/static/js/main.deba30e7.js.map"
+    "main.4da771ee.css.map": "/electronic-gradebook-react/static/css/main.4da771ee.css.map",
+    "main.1bbf3372.js.map": "/electronic-gradebook-react/static/js/main.1bbf3372.js.map"
   },
   "entrypoints": [
-    "static/css/main.2356843d.css",
-    "static/js/main.deba30e7.js"
+    "static/css/main.4da771ee.css",
+    "static/js/main.1bbf3372.js"
   ]
 }
