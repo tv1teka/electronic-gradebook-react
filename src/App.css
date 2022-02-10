@@ -12,7 +12,7 @@ th {
 .policies__table-cell {
   border-bottom: 1px solid black;
   border-right: 1px solid black;
-  padding: 10px;
+  /* padding: 10px; */
   width: 130px;
   height: 30px;
 }
@@ -23,26 +23,16 @@ input {
 }
 
 form {
-  position: fixed;
+  position: absolute;
   width: 450px;
   border: 1px solid black;
   box-shadow: 0px 9px 14px rgba(0, 0, 0, 0.03);
   border-radius: 15px;
   background-color: #fff;
+  color: black;
+  top: 0px;
+  left: 150px;
 }
-
-/* form {
-  position: relative;
-  width: 450px;
-  height: 215px;
-  border: 1px solid black;
-  box-shadow: 0px 9px 14px rgb(0 0 0 / 3%);
-  border-radius: 15px;
-  background-color: #fff;
-  margin: 0 auto;
-  margin-top: 50px;
-} */
-
 .button {
   border: none;
   padding: 18px 24px;
@@ -75,4 +65,9 @@ form {
 .active {
   background-color: #7671dd;
   color: #fff;
+  position: relative;
+}
+
+.cell__div {
+  padding: 16px;
 }

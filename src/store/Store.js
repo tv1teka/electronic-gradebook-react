@@ -124,13 +124,13 @@ class Store {
         FIO: null
     }
 
-    setDay(day, name) {
+    setDay = (day, name) => {
         this.day.date = day.date;
         this.day.grade = day.grade;
         this.day.FIO = name;
     }
 
-    setDate(value) {
+    setGrade(value) {
         this.day.grade = value;
     }
 
@@ -149,16 +149,14 @@ class Store {
         // });
 
         for (let index = 0; index < this.Students.length; index++) {
-            if(this.Students[index].FIO == this.day.FIO) {
+            if(this.Students[index].FIO === this.day.FIO) {
                 for(let j = 0; j < this.Students[index].Data.length; j++) {
-                    if(this.Students[index].Data[j].date == this.day.date) {
+                    if(this.Students[index].Data[j].date === this.day.date) {
                         this.Students[index].Data[j].grade = this.day.grade
                     }
                 }
             } 
         }
-
-
     }
     
     
